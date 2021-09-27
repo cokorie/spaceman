@@ -34,3 +34,7 @@ function letterClick(evt)   {
     const letters = letterEls.indexOf(evt.target);
 
 }
+
+function render() {
+    btnEl.style.visibility = winner ? 'visible' : 'hidden';
+  }
