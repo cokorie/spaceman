@@ -1,86 +1,89 @@
 /*----- constants -----*/
 const words = ['CAT', 'DOG', 'HUMAN', 'BUG', 'BEAR', 'THE MONSTER MASH'];
-const MAX_WRONG_NUMBERS = 6;
+const MAX_WRONG_GUESSES = 6;
+const SPRITE_WIDTH = 504;
 
 /*----- app's state (variables) -----*/
 let secretWord;
 let guessWord;
 let winOrLoss;
 let wrongLetters;
-  
+
 /*----- cached element references -----*/
 const letterEls = document.querySelectorAll('#ltr > button');
 const msgEl = document.querySelector('h2');
 const replayEl = document.getElementById('replay');
-const astroPic = document.getElementById('astro');
+let astroPic = document.getElementById('astro');
+const guessEl = document.getElementById('guess');
 
 /*----- event listeners -----*/
 document.querySelector('#ltr')
   .addEventListener('click', letterClick);
-  
+
+replayEl.addEventListener('click', init);
+
 /*----- functions -----*/
 init();
 
 function init() {
-    secretWord = words[Math.floor(Math.random() * words.length)];
-    winOrLoss = null;
-    wrongLetters = '';
-    guessWord = '';
-    for (let letter of secretWord) {
-      guessWord += letter === ' ' ? ' ' : '_';
-    } 
-    // render();
+  secretWord = words[Math.floor(Math.random() * words.length)];
+  winOrLoss = null;
+  wrongLetters = '';
+  guessWord = '';
+  for (let letter of secretWord) {
+    guessWord += letter === ' ' ? ' ' : '_';
+
+  }
+  render();
 }
 
-function letterClick(evt)   {
+function letterClick(evt) {
   const letter = evt.target.innerText;
   if (
-    evt.target.tagName !== 'BUTTON' || 
-    winOrLoss || 
+    evt.target.tagName !== 'BUTTON' ||
+    winOrLoss ||
     wrongLetters.includes(letter) ||
     guessWord.includes(letter)
-  ) return;  
+  ) return;
   if (secretWord.includes(letter)) {
     // rebuild guessWord so that it includes the letter, possibly in multiple positions
     let newGuessWord = '';
-    for(let i = 0; i < secretWord.length; i++) {
-      
+    for (let i = 0; i < secretWord.length; i++) {
+      if (secretWord.charAt(i) === letter) {
+        newGuessWord += letter;
+      } else {
+        newGuessWord += guessWord.charAt(i);
+      }
     }
     guessWord = newGuessWord;
   } else {
     wrongLetters += letter;
   }
+  winOrLoss = getWinOrLoss();
+  render();
 }
 
 function render() {
-    // replayEl.style.visibility = winner ? 'visible' : 'hidden';
-    console.log(secretWord[findWordsIndex]);
-    renderWord(findWordsIndex);
-  }
-
-function renderWord(wordIndex) {
-
-  let wordMsg = secretWord[wordIndex].toString();
-  for (let i = 0; i < wordMsg.length; i++) {
-      wordMsg = wordMsg.replace(',', ' ');
-  }
-  msgEl.innerHTML = wordMsg;
+  replayEl.style.visibility = winOrLoss ? 'visible' : 'hidden';
+  guessEl.textContent = guessWord;
+  letterEls.forEach((btn) => {
+    if (guessWord.includes(btn.innerText)) {
+      btn.style.backgroundColor = 'green';
+    } else if (wrongLetters.includes(btn.innerText)) {
+      btn.style.backgroundColor = 'red';
+    } else {
+      btn.style.backgroundColor = 'gray';
+    }
+  });
+  astroPic.style.backgroundPositionX = `${-SPRITE_WIDTH * wrongLetters.length}px`;
 }
 
-function randomWordIndex() {
-  const findWordsIndex = words.findIndex(word => word === chosenWord);
-  // console.log(findWordsIndex);
-  return findWordsIndex;
-}
-
-function sWordChange (buttonText, wordIndex) {
-  const chosenWord = word[wordIndex];
-  if (chosenWord.includes(buttonText)) {
-    // secretWord[wordIndex][0] = ;
+function getWinOrLoss() {
+  if (secretWord === guessWord) {
+    return 'W';
+  } else if (wrongLetters.length === MAX_WRONG_GUESSES) {
+    return 'L';
+  } else {
+    return null;
   }
-  secretWord[wordIndex];
-}
-
-function getWinOrLoss () {
-
 }

@@ -1,15 +1,25 @@
+body {
+    height: 100vhs;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
     color: lightblue;
-    display: flex;
-    align-self: center;
-    justify-content: center;
+    text-align: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #astro {
-    height: 500px;
-    width: 500px;
-}
+    width: 504px;   /* width of each "frame" of the image */
+    height: 687px;  /* height of the image */
+    background-image: url('../imgs/spaceman-filmstrip.jpg');
+    transform: scale(.5);  /* scale the side of the element as desired */
+    background-position-x: 504px;
+    margin-top: -250px;
+  }
 
 /* #A {
     border: black;
@@ -35,12 +45,10 @@ button {
     background-color: goldenrod;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
-    /* align-self: flex-end; */
     justify-content: space-evenly;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* cursor: pointer; */
+    width: 595px;
 }
 
 /* #ltr:hover {
@@ -59,4 +67,10 @@ button:hover {
 
 h2 {
     font-size: 10vmin;
+}
+
+#guess {
+    letter-spacing: 2vmin;
+    font-size: 10vmin;
+    margin-top: -150px;
 }
