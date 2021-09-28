@@ -33,11 +33,23 @@ function init() {
 }
 
 function letterClick(evt)   {
-    const buttonText = evt.target.innerText;
-    console.log(buttonText);
-
-    const wordIndex = randomWordIndex();
-
+  const letter = evt.target.innerText;
+  if (
+    evt.target.tagName !== 'BUTTON' || 
+    winOrLoss || 
+    wrongLetters.includes(letter) ||
+    guessWord.includes(letter)
+  ) return;  
+  if (secretWord.includes(letter)) {
+    // rebuild guessWord so that it includes the letter, possibly in multiple positions
+    let newGuessWord = '';
+    for(let i = 0; i < secretWord.length; i++) {
+      
+    }
+    guessWord = newGuessWord;
+  } else {
+    wrongLetters += letter;
+  }
 }
 
 function render() {
