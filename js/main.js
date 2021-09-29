@@ -61,6 +61,7 @@ function letterClick(evt) {
   }
   winOrLoss = getWinOrLoss();
   render();
+  renderMsg();
 }
 
 function render() {
@@ -76,6 +77,7 @@ function render() {
     }
   });
   astroPic.style.backgroundPositionX = `${-SPRITE_WIDTH * wrongLetters.length}px`;
+  renderMsg();
 }
 
 function getWinOrLoss() {
@@ -85,5 +87,25 @@ function getWinOrLoss() {
     return 'L';
   } else {
     return null;
+  }
+}
+
+function renderMsg () {
+  if (secretWord === guessWord) {
+    msgEl.innerHTML = `CONGRATULATIONS! YOU'VE WON!`;
+  } else if (MAX_WRONG_GUESSES === 5) {
+    msgEl.innerHTML = '5 guesses left!';
+  } else if (MAX_WRONG_GUESSES === 4) {
+    msgEl.innerHTML = '4 guesses left!';
+  } else if (MAX_WRONG_GUESSES === 3) {
+    msgEl.innerHTML = '3 guesses left!';
+  } else if (MAX_WRONG_GUESSES === 2) {
+    msgEl.innerHTML = '2 guesses left!';
+  } else if (MAX_WRONG_GUESSES === 1) {
+    msgEl.innerHTML = '1 guess left!';
+  } else if (MAX_WRONG_GUESSES === 0){
+    msgEl.innerHTML = 'GAME OVER! TRY AGAIN!';
+  } else {
+    return;
   }
 }
