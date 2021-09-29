@@ -1,46 +1,56 @@
-## Spaceman Pseudocode
+# Spaceman
 
-_1) Define required constants_
-  1.1) Create seperate <div> tags in the HTML for each letter of the alphabet, for the player to select from for the puzzle.
-  1.2) Use a picture that will slowly unveil throughout the game, as the player gets the letter in a given word incorrect.
+__Spaceman__
+The objective of winning Spaceman is to be able to identify the secret word, displayed in underscore spaces in the website window, before the 6 alotted chances to do so have been used.
 
-_2) Define required variables used to track the state of the game_
-  2.1) Use an array (word) in the JavaScript code set to represent the word choices for the selected word in the game.
-    2.1.1) Parse the elements of each word into letter, for being tied to their designated spots for the letter display on the browser.
-  2.2) Create a variable for determining when the player has either won or lost the game.
-  2.3) Create a variable for choosing from the words used in the game at random, for the player to guess from.
+The player will be able to click on the letter buttons at the bottom of the page to begin guessing any given letter in the word. As each letter guess is either correct or incorrect, the corresponding button will update its background color from gray to green (correct guess) or red (incorrect guess). After the player has guessed a given letter, the letter will not be able to be re-selected.
 
-_3) Store elements on the page that will be accessed in code more than once in variables to make code more concise, readable and performant._
-  3.1) Store the parsed out elements of the words the players will guess from, to be stored into the open spaces for letters on the screen. [refer to step 2.1.1]
+Also, as each incorrect guess is given, an image of a "Spaceman" will slowly be unveiled in 6 parts, for each incorrect guess. When the entire "Spaceman" is visible, the player has lost the game and will have the option to replay by clicking the "Replay?" button at the bottom of the page.
 
-_4) Upon loading the app should:_
-	4.1) Initialize the state variables
-        4.1.1) Initialize the word array for the game, that will be kept track of, for the player to choose letters to guess from.
-            4.1.1.1) The letters for each word choice will be selected as the word is randomly selected between for the game each round.
-        4.1.2) Initialize the winner variable for determing whether the player has won or lost the game.
-        4.1.3) Initialize the variable for unveiling the picture of the Spaceman, as the player gets a letter choice incorrect.
-	4.2) Render those values to the page
-        4.2.1) Render the word choice:
-            4.2.1.1) Select a random word from the word array, and create a function that will parse the given word into seperate letters.
-                4.2.1.1.1) Assign the given letters to the empty letter spaces on the browser.
-            4.2.1.2) The player will choose from the A-Z letter choices at the bottom of the browser page, to select which letters will make up the word needed to win the game.
-        4.2.2) Render the end game message:
-            4.2.2.1) If the winner variable returns that the player has not selected the correct letters, but their 8 chances have not expired yet, render no message
-            4.2.2.2) If the winner returns that the player has not selected the correct letters in the 8 chances given, render a lose message with the replay button & randomly select another word from the word array
-            4.2.2.3) If the winner variable returns that the player has won the game, render a winning message and unhide the replay button for another game.
-	4.3) Wait for the user to click a letter choice for the given word
+As each incorrect guess is given by the player, a message will also display at the top of the page to let them know how many guesses are still available to them. After the given guesses have finished, a message to try again will display, along with the replay button at the bottom of the screen.
+
+If the player successfully guesses the word before their 6 chances are finished, a message congratulating the player on winning will display at the top of the page, along with the replay button.
 
 
-_5) Handle a player clicking a letter square_
-    5.1) Check into the function dictating which letter is clicked upon for the game
-        5.1.1) As the function is checked, check through the empty spaces on the browser page to see if the clicked upon letter matches any of the spaces on the screen.
-    5.2) If the letter selected by the player matches one of the empty spaces in the game, add that letter to the space(s) and allow the player to select another letter.
-    5.3) Allow for selection of letters by the players, if the given values of the function are not empty or the 8 chances to select a correct letter have not expired.
-    5.4) If the player wins the game:
-        5.4.1) Display a winning message, and reveal the replay button for trying another random word.
-    5.5) If the player loses the game:
-        5.5.1) Display a lose message, and reveal the replay button for trying another random word as well.
-    5.6) Replay button will allow the browser game to generate another random word from the word array, and start the process all over again for a new game.
+__Screenshots__
+<!-- Use Imgur to house screenshots for Spaceman -->
+<!-- ![GitHub Logo](/images/logo.png) Format: ![Alt Text](url) -->
 
-_6) Handle a player clicking the replay button_
-    6.1) Refer to 4.1.2 (initialization) & 5.6 (render).
+
+__Technologies Used__
+  _HTML_
+  The HTML code is used to house the: 
+  * game title, 
+  * tagline, 
+  * area for amount of guesses left, 
+  * spaces for letters of the alphabet, and the 
+  * replay button.
+
+  _CSS_ 
+  The CSS code is used to house the:
+  * styling of the font for the title, 
+  * tagline, 
+  * amount of guesses message, 
+  * guessing characters, 
+  * letter buttons and replay button, 
+  * sizing & grid base for the "Spaceman" images for letter characters on the website, 
+  * the different shapes of the buttons on the page, and the 
+  * background image of the page.
+
+  _JavaScript_ 
+  The JaveScript code is used to house the:
+  * The functions & logic behind the rendering of the "Spaceman" image, 
+  * the letters of the secret word, 
+  * the random process of choosing the current secret word for the player to guess, 
+  * the clicking of the letter buttons to fill in the guessing spaces if the letter is located in the secret guessing word, 
+  * the game's replay button when it is finished, 
+  * the color change of the letters for both correct & incorrect guessed letters in the given secret word, along with
+  * the messages displayed for how many guesses the player has left & the winning and losing messages as well.
+
+
+__Getting Started__
+Please click into the following website link to check out my Spaceman game: 
+[Chijioke's Spaceman](https://cokorie.github.io/spaceman/)
+
+
+__Further Enhancements (Icebox)__
