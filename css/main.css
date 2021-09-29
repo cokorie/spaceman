@@ -1,26 +1,40 @@
+*   {
+    box-sizing: border-box;
+}
+
 body {
-    height: 100vhs;
+    /* height: 100vh; */
+    font-size: 3vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-image: url('https://static.theprint.in/wp-content/uploads/2020/03/minor-planets.jpg');
+    /* background-color: bisque; */
 }
 
 h1 {
     color: lightblue;
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Gemunu Libre', sans-serif;
     /* padding: -100px; */
+    margin-top: -10px;
 }
 
 h2 {
-    color: black;
+    color: white;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    /* font-size: 10px; */
-    padding: 50px;
-    margin-bottom: 50px;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 30px;
+    margin: -20px;
+}
+
+h5 {
+    color: lightblue;
+    text-align: center;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin-top: -30px;
 }
 
 #astro {
@@ -29,13 +43,13 @@ h2 {
     background-image: url('../imgs/spaceman-filmstrip.jpg');
     transform: scale(.5);  /* scale the side of the element as desired */
     background-position-x: 504px;
-    margin-top: -250px;
+    margin-top: -110px;
   }
 
 button {
     background-color: red;
     border-radius: 25%;
-    border-color: black;
+    border-color: white;
     margin: 5px;
     padding: 10px;
     display: flex;
@@ -45,7 +59,7 @@ button {
 #ltr {
     border: black;
     border-color: blue;
-    background-color: goldenrod;
+    background-color: rgb(32, 66, 218);
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -54,21 +68,18 @@ button {
     width: 595px;
 }
 
+#replay {
+    color: white;
+}
+
 #replay:hover {
     background-color: white;
     color: red;
 }
 
-button:hover {
-    background-color: purple;
-}
-
-h2 {
-    font-size: 10vmin;
-}
-
 #guess {
     letter-spacing: 2vmin;
-    font-size: 10vmin;
+    font-size: 7vmin;
     margin-top: -150px;
+    font-family: 'Gemunu Libre', sans-serif;
 }
