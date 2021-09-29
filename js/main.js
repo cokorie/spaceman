@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const words = ['CAT', 'DOG', 'HUMAN', 'BUG', 'BEAR', 'THE MONSTER MASH'];
+const words = ['THE BIRD IS THE WORD', 'TOP OF THE MORNING', 'I AM ONLY HUMAN', 'HAVE A GREAT DAY', 'LOVE IS THE ANSWER', 'THE MONSTER MASH'];
 const MAX_WRONG_GUESSES = 6;
 const SPRITE_WIDTH = 504;
 
@@ -91,21 +91,21 @@ function getWinOrLoss() {
 }
 
 function renderMsg () {
-  if (secretWord === guessWord) {
+  if (winOrLoss === 'W') {
     msgEl.innerHTML = `CONGRATULATIONS! YOU'VE WON!`;
-  } else if (MAX_WRONG_GUESSES === 5) {
+  } else if (wrongLetters.length === 1) {
     msgEl.innerHTML = '5 guesses left!';
-  } else if (MAX_WRONG_GUESSES === 4) {
+  } else if (wrongLetters.length === 2) {
     msgEl.innerHTML = '4 guesses left!';
-  } else if (MAX_WRONG_GUESSES === 3) {
+  } else if (wrongLetters.length === 3) {
     msgEl.innerHTML = '3 guesses left!';
-  } else if (MAX_WRONG_GUESSES === 2) {
+  } else if (wrongLetters.length === 4) {
     msgEl.innerHTML = '2 guesses left!';
-  } else if (MAX_WRONG_GUESSES === 1) {
+  } else if (wrongLetters.length === 5) {
     msgEl.innerHTML = '1 guess left!';
-  } else if (MAX_WRONG_GUESSES === 0){
-    msgEl.innerHTML = 'GAME OVER! TRY AGAIN!';
+  } else if (winOrLoss === 'L') {
+      msgEl.innerHTML = 'GAME OVER! TRY AGAIN!';
   } else {
-    return;
+    msgEl.innerHTML = '';
   }
 }
