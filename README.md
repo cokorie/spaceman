@@ -17,10 +17,38 @@ If the player successfully guesses the word before their 6 chances are finished,
 ![Spaceman Starting Screen](/imgs/spaceman-starting-screen.png)
 ###### This is the starting page for Spaceman
 
+![Spaceman Correct Letter](/imgs/spaceman_correct_letter.png)
+##### Correct letter, hightlighted in green
+
+![Spaceman Incorrect Letter](/imgs/spaceman_wrong_letter.png)
+##### Incorrect letter, hightlighted in red
+
+![Spaceman Replay Button](/imgs/spaceman_replay_button.png)
+##### The replay button, displayed after you win or lose
+
 ![Spaceman Correct Answer Screen](/imgs/spaceman_correct_answer_screen.png)
 ##### This is the appearance of the screen with a correct answer
 
+![Spaceman Winning Screen](/imgs/spaceman_winning_screen.png)
+##### Winning Screen & "CONGRATULATIONS! YOU'VE WON!" message are displayed
 
+![Spaceman First Incorrect Guess](/imgs/spaceman_first_wrong_answer.png)
+##### First Incorrect Guess & "5 guesses left" message are displayed
+
+![Spaceman Second Incorrect Guess](/imgs/spaceman_second_wrong_answer.png)
+##### Second Incorrect Guess & "4 guesses left" message are displayed
+
+![Spaceman Third Incorrect Guess](/imgs/spaceman_third_wrong_answer.png)
+##### Third Incorrect Guess & "3 guesses left" message are displayed
+
+![Spaceman Fourth Incorrect Guess](/imgs/spaceman_fourth_wrong_answer.png)
+##### Fourth Incorrect Guess & "2 guesses left" message are displayed
+
+![Spaceman Fifth Incorrect Guess](/imgs/spaceman_fifth_wrong_answer.png)
+##### Fifth Incorrect Guess & "1 guess left" message are displayed
+
+![Spaceman Losing Screen](/imgs/spaceman_game_over_wrong_answer.png)
+##### Losing Screen & "GAME OVER! TRY AGAIN!" message are displayed
 
 ### __Technologies Used__
 ##### _HTML_
