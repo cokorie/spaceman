@@ -1,6 +1,6 @@
 # Spaceman
 
-__Spaceman__
+### __Spaceman__
 The objective of winning Spaceman is to be able to identify the secret word, displayed in underscore spaces in the website window, before the 6 alotted chances to do so have been used.
 
 The player will be able to click on the letter buttons at the bottom of the page to begin guessing any given letter in the word. As each letter guess is either correct or incorrect, the corresponding button will update its background color from gray to green (correct guess) or red (incorrect guess). After the player has guessed a given letter, the letter will not be able to be re-selected.
@@ -12,45 +12,55 @@ As each incorrect guess is given by the player, a message will also display at t
 If the player successfully guesses the word before their 6 chances are finished, a message congratulating the player on winning will display at the top of the page, along with the replay button.
 
 
-__Screenshots__
+### __Screenshots__
 <!-- Use Imgur to house screenshots for Spaceman -->
-<!-- ![GitHub Logo](/images/logo.png) Format: ![Alt Text](url) -->
+![Spaceman Starting Screen](/imgs/spaceman-starting-screen.png)
+###### This is the starting page for Spaceman
+
+![Spaceman Correct Answer Screen](/imgs/spaceman_correct_answer_screen.png)
+##### This is the appearance of the screen with a correct answer
 
 
-__Technologies Used__
-  _HTML_
+
+### __Technologies Used__
+##### _HTML_
   The HTML code is used to house the: 
-  * game title, 
-  * tagline, 
-  * area for amount of guesses left, 
-  * spaces for letters of the alphabet, and the 
-  * replay button.
+  * Game title
+  * Game tagline 
+  * Area for amount of guesses left 
+  * Spaces for letters of the alphabet 
+  * Replay button
 
-  _CSS_ 
-  The CSS code is used to house the:
-  * styling of the font for the title, 
-  * tagline, 
-  * amount of guesses message, 
-  * guessing characters, 
-  * letter buttons and replay button, 
-  * sizing & grid base for the "Spaceman" images for letter characters on the website, 
-  * the different shapes of the buttons on the page, and the 
-  * background image of the page.
+###### _CSS_ 
+  The CSS code is used to house the styling of the:
+  * Font for the title 
+  * Game tagline
+  * Amount of guesses messages 
+  * Guessing characters
+  * Letter buttons 
+  * Replay button 
+  * Sizing & grid base for the "Spaceman" images for letter characters on the game page 
+  * The different shapes of the buttons on the page
+  * Background image of the game page
 
-  _JavaScript_ 
-  The JaveScript code is used to house the:
-  * The functions & logic behind the rendering of the "Spaceman" image, 
-  * the letters of the secret word, 
-  * the random process of choosing the current secret word for the player to guess, 
-  * the clicking of the letter buttons to fill in the guessing spaces if the letter is located in the secret guessing word, 
-  * the game's replay button when it is finished, 
-  * the color change of the letters for both correct & incorrect guessed letters in the given secret word, along with
-  * the messages displayed for how many guesses the player has left & the winning and losing messages as well.
+###### _JavaScript_ 
+  The JaveScript code is used to house the functions & logic of the:
+  * Rendering of the "Spaceman" image
+  * Letters of the secret word
+  * Random process of choosing the current secret word for the player to guess
+  * Clicking of the letter buttons to fill in the guessing spaces if the letter is located in the secret guessing word
+  * Game's replay button when it is finished
+  * Color change of the letters for both correct & incorrect guessed letters in the given secret word
+  * Messages displayed for how many guesses the player has left, the winning & losing messages
 
 
-__Getting Started__
+### __Getting Started__
 Please click into the following website link to check out my Spaceman game: 
-[Chijioke's Spaceman](https://cokorie.github.io/spaceman/)
+* [Chijioke's Spaceman](https://cokorie.github.io/spaceman/)
 
 
-__Further Enhancements (Icebox)__
+### __Further Enhancements (Icebox)__
+* Adding audio for buttons, when they are clicked
+* Creating variables and a function to ensure there is no chance of repeating a random word in the "words" array
+* Adding animation to the "Spaceman" shown on screen
+* Adding a media query for the reformatting of the game window on phones & tablets
