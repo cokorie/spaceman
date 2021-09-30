@@ -1,7 +1,11 @@
 /*----- constants -----*/
-const words = ['THE BIRD IS THE WORD', 'TOP OF THE MORNING', 'I AM ONLY HUMAN', 'HAVE A GREAT DAY', 'LOVE IS THE ANSWER', 'THE MONSTER MASH'];
+const words = ['THE BIRD IS THE WORD', 'TOP OF THE MORNING', 'I AM ONLY HUMAN', 'HAVE A GREAT DAY', 'LOVE IS THE ANSWER', 'THE MONSTER MASH', 'THE SOLAR SYSTEM', 'THE MILKY WAY', 'ANDROMEDA', 'EYE OF SAURON', 'ROCKETMAN', 'TRIANGULUM GALAXY', 'SCORPIUS', 'MERCURY', 'APOLLO THIRTEEN', 'MAE JEMISON', 'YVONNE CAGLE', 'NEIL ARMSTRONG', 'STRAIGHT TO THE MOON', ];
 const MAX_WRONG_GUESSES = 6;
 const SPRITE_WIDTH = 504;
+// const sounds = {
+//   laser: 'https://freesound.org/s/376694/',
+//   asteroid: 'https://freesound.org/s/565846/',
+// };
 
 /*----- app's state (variables) -----*/
 let secretWord;
@@ -15,14 +19,24 @@ const msgEl = document.querySelector('h2');
 const replayEl = document.getElementById('replay');
 let astroPic = document.getElementById('astro');
 const guessEl = document.getElementById('guess');
+// const player = new Audio();
 
 /*----- event listeners -----*/
 document.querySelector('#ltr')
   .addEventListener('click', letterClick);
-
 replayEl.addEventListener('click', init);
+// document.querySelector('button').addEventListener('click', buttonSounds);
+
 
 /*----- functions -----*/
+
+// function buttonSounds(evt) {
+//   const button = evt.target.textContent
+//   if (
+
+//   )
+// }
+
 init();
 
 function init() {
