@@ -3,22 +3,18 @@
 }
 
 body {
-    /* height: 100vh; */
     font-size: 3vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url('https://static.theprint.in/wp-content/uploads/2020/03/minor-planets.jpg');
-    /* background-color: bisque; */
 }
 
 h1 {
     color: lightblue;
     text-align: center;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     font-family: 'Gemunu Libre', sans-serif;
-    /* padding: -100px; */
     margin-top: -10px;
 }
 
@@ -38,10 +34,10 @@ h5 {
 }
 
 #astro {
-    width: 504px;   /* width of each "frame" of the image */
-    height: 687px;  /* height of the image */
+    width: 504px;
+    height: 687px;
     background-image: url('../imgs/spaceman-filmstrip.jpg');
-    transform: scale(.5);  /* scale the side of the element as desired */
+    transform: scale(.5);
     background-position-x: 504px;
     margin-top: -110px;
   }
@@ -83,9 +79,3 @@ button {
     margin-top: -150px;
     font-family: 'Gemunu Libre', sans-serif;
 }
-
-/* @media only screen and (min-width: 768px) {
-    body {
-        
-    }
-  } */
