@@ -23,6 +23,7 @@ const guessEl = document.getElementById('guess');
 const laserPlayer = new Audio('http://www.freesound.org/data/previews/42/42106_70164-lq.mp3');
 const sirenPlayer = new Audio('http://www.freesound.org/data/previews/336/336899_4939433-lq.mp3');
 const clickPlayer = new Audio('https://www.fesliyanstudios.com/play-mp3/387');
+// const wrongPlayer = new Audio('https://www.sfxbuzz.com/jdownloads/Buzzer,%20Alarm%20and%20Siren%20Sound%20Effects/Wrong%20Clakson%20Sound%20Effect.mp3');
 
 /*----- event listeners -----*/
 document.querySelector('#ltr').addEventListener('click', letterClick);
@@ -82,6 +83,7 @@ function render() {
       clickPlayer.play();
     } else if (wrongLetters.includes(btn.innerText)) {
       btn.style.backgroundColor = 'red';
+      // wrongPlayer.play();
       clickPlayer.play();
     } else {
       btn.style.backgroundColor = 'gray';
