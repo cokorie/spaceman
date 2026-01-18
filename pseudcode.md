@@ -1,7 +1,7 @@
 # Spaceman Pseudocode
 
 ### _1) Define required constants_
- 1. 1.1) Create seperate <div> tags in the HTML for each letter of the alphabet, for the player to select from for the puzzle.
+ 1. 1.1) Create seperate <div> tags in HTML file for each letter of the alphabet, for the player to select from for the puzzle.
   1. 1.2) Use a picture that will slowly unveil throughout the game, as the player gets the letter in a given word incorrect.
 
 ### _2) Define required variables used to track the state of the game_
