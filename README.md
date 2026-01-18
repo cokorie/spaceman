@@ -87,7 +87,7 @@ When the game has finished, whether the player has won or lost, the secret word 
 
 ### __Getting Started__
 Please click into the following website link to check out my Spaceman game: 
-* [Chijioke's Spaceman](https://cokorie.github.io/spaceman/)
+* [Chijioke's SPACEMAN](https://cokorie.github.io/spaceman/)
 
 
 ### __Further Enhancements (Icebox)__
