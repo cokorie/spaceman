@@ -1,6 +1,6 @@
-# Spaceman
+# SPACEMAN
 
-### __Welcome to Chijioke's Spaceman!__
+### __Welcome to Chijioke's SPACEMAN!__
 The objective of winning Spaceman is to be able to identify the secret word, displayed in underscore spaces in the website window, before the 6 alotted chances to do so have been used.
 
 The player will be able to click on the letter buttons at the bottom of the page to begin guessing any given letter in the word. As each letter guess is either correct or incorrect, the corresponding button will update its background color from gray to green (correct guess) or red (incorrect guess). After the player has guessed a given letter, the letter will not be able to be re-selected and the game will play a mouse click sound.
